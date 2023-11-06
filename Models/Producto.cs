@@ -11,6 +11,9 @@ namespace APIProductos.Models
         [Required]
         
         public int Cantidad { get; set; }
+        [Required]
         public int Valor { get; set; }
     }
+
+    
 }

@@ -14,6 +14,7 @@ builder.Services.AddDbContext<ApplicationDBContext>(option=>
     option.UseSqlServer(builder.Configuration.GetConnectionString("ConsStr"));
 });
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,6 +23,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
 
 app.UseAuthorization();
 

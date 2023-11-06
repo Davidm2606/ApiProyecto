@@ -66,8 +66,8 @@ namespace APIProductos.Controllers
             if (pEncontrado != null)
             {
                 pEncontrado.Nombre = producto.Nombre != null ? producto.Nombre : pEncontrado.Nombre;
-                pEncontrado.Valor = producto.Valor != null ? producto.Valor : pEncontrado.Valor;
-                pEncontrado.Cantidad = producto.Cantidad != null ? producto.Cantidad : pEncontrado.Cantidad;
+                pEncontrado.Valor = producto.Valor != 0 ? producto.Valor : pEncontrado.Valor;
+                pEncontrado.Cantidad = producto.Cantidad != 0 ? producto.Cantidad : pEncontrado.Cantidad;
                 _db.Update(pEncontrado);
                 await _db.SaveChangesAsync();
                 return Ok(pEncontrado);
